@@ -30,7 +30,52 @@ color: black;
   border-color: white;
   width: 100%;
 }
-
+.select-wrapper {
+  position: relative;
+  user-select: none;
+  width: 100%;
+}
+.select__trigger {
+  position: relative;
+  font-size: 18px;
+  color: #3b3b3b;
+  background: #ffffff;
+  cursor: pointer;
+}
+.custom-options {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: absolute;
+  display: block;
+  top: 152%;
+  left: -47px;
+  width: max-content;
+  background: #fff;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+.select.open .custom-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+.offcanvas.show .select.open .custom-options {
+  display: none;
+}
+.custom-option {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  line-height: 32px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.custom-option:hover {
+  cursor: pointer;
+}
 @media screen and (max-width: 580px){
   .foot div{
     width: 100%;
